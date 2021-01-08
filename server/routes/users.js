@@ -82,7 +82,6 @@ router.post(
           res.json({ token });
         }
       );
-      res.send(`New User is Created`);
     } catch (error) {
       console.log(error.message);
       return res.status(500).send("Server Error");

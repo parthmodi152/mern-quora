@@ -1,15 +1,15 @@
-const e = require("express");
 const express = require("express");
 const app = express();
 const connectToDatabase = require("./config/connectToDatabase");
 const cors = require("cors");
-const c = require("config");
+const morgan = require("morgan");
 
 // Connects the app to database
 connectToDatabase();
 
 // This prevents the cors policy warning
 app.use(cors());
+app.use(morgan("dev"));
 
 // Allows to use req.body as JSON
 app.use(express.json({ extended: false }));
