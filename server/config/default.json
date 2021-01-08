@@ -1,0 +1,4 @@
+{
+    "mongoURI" : "mongodb+srv://modi:modi@products.sskdv.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    "jsonwebtokenSecretKey":"bfdkaKasdHSDBVHJSGskjoian192jkSL286sshbas7"
+}
