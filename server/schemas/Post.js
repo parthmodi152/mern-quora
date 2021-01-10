@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const PostSchema = mongoose.Schema({
+let PostSchema = mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "user",
@@ -11,12 +11,9 @@ const PostSchema = mongoose.Schema({
   },
   lastName: {
     type: String,
-    required: true,
   },
   userName: {
     type: String,
-    required: true,
-    unique: true,
   },
   avatar: {
     type: String,
@@ -24,6 +21,10 @@ const PostSchema = mongoose.Schema({
   date: {
     type: Date,
     default: Date.now(),
+  },
+  textOfThePost: {
+    type: String,
+    required: true,
   },
   likes: [
     {
@@ -44,6 +45,9 @@ const PostSchema = mongoose.Schema({
         required: true,
       },
       avatar: {
+        type: String,
+      },
+      textOfTheComment: {
         type: String,
       },
       date: {
